@@ -213,8 +213,11 @@ App = function() {
 	}
 
 	function main() {
-		i_audio = document.getElementById("audio");
+	
+		i_audio = new Audio('audio.ogg');
+		i_audio.id = 'audio';
 		i_audio.addEventListener('loadedmetadata', loadedMetadata, false);
+		i_audio.play();
 		o_audio = new Audio();
 
 		eq[0] = [ 0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00];
